@@ -1,6 +1,9 @@
 require('dotenv').config()
 const express = require('express')
+const router = require('./controllers/places')
 const app = express()
+
+app.use('/places', require('./controllers/places'))
 
 
 app.get('/', (req, res) =>{
